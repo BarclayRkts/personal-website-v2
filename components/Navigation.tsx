@@ -6,20 +6,21 @@ import {SquareTerminal, User, Newspaper, MailWarning, Terminal, Code2} from 'luc
 
 const mainLinks = [
     {href: '#about', label: 'Page Me', icon: User},
+    {href: '#projects', label: 'Projects', icon: SquareTerminal},
     {href: '#experience', label: 'Experience', icon: Newspaper},
     {href: '#skills', label: 'Technical Skills', icon: Code2},
-    {href: '#projects', label: 'Projects', icon: SquareTerminal},
 ];
 
 const connectLinks = [
-    {href: '/linkedIn', label: 'LinkedIn', icon: FaLinkedin},
-    {href: '/GitHub', label: 'GitHub', icon: SiRefinedgithub},
-    {href: '/Email', label: 'Email', icon: MailWarning},
+    {href: 'https://www.linkedin.com/in/deja-barclay-b3a9a0160/', label: 'LinkedIn', icon: FaLinkedin},
+    {href: 'https://github.com/BarclayRkts', label: 'GitHub', icon: SiRefinedgithub},
+    {href: 'mailto:dejabarclay1999@gmail.com', label: 'Email', icon: MailWarning},
 ];
 
 const Navigation = () => {
     return (
-        <nav className="w-full md:w-64 flex-shrink-0 bg-background md:sticky border-r border-border md:top-0 md:h-screen p-8 md:pt-16">
+        <nav
+            className="w-full md:w-64 flex-shrink-0 bg-background md:sticky border-r border-border md:top-0 md:h-screen p-8 md:pt-16">
             <div className="flex items-center gap-3 mb-12">
                 <Terminal className="w-6 h-6 text-accent"/>
                 <Link href="/">
@@ -44,6 +45,7 @@ const Navigation = () => {
                         <Link
                             key={link.href}
                             href={link.href}
+                            target="_blank"
                             className="flex items-center gap-3.5 group p-1 -ml-1 rounded-md hover:bg-button transition-colors"
                         >
                             <Icon className="w-5 h-5 text-muted group-hover:text-accent" strokeWidth={1.5}/>
@@ -61,6 +63,7 @@ const Navigation = () => {
                             <Link
                                 key={link.href}
                                 href={link.href}
+                                target="_blank"
                                 className="flex items-center gap-4 text-sm group text-muted hover:text-body transition-colors"
                             >
                                 <Icon className="w-4 h-4 text-muted group-hover:text-accent"/>

@@ -1,80 +1,79 @@
-import { SquareTerminal } from 'lucide-react';
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import Link from 'next/link';
+import {SquareTerminal} from 'lucide-react';
 import {ReactNode} from "react";
 
 const projects = [
     {
         year: '2026',
         title: 'Bookmark Manager',
-        description: 'Full-stack application utilizing Spring Boot, DynamoDB, and React.',
-        links: { demo: '#', source: '#' }
+        description: 'A full-stack link organization tool using AWS.',
+        tags: ['Java', 'Spring Boot', 'AWS', 'React'],
+        repo: 'https://github.com/BarclayRkts/Bookmark'
     },
     {
         year: '2026',
         title: 'Interactive Metronome',
-        description: 'Real-time synchronization web app with a responsive UI.',
-        links: { article: '#', demo: '#', source: '#' }
+        description: 'Real-time rhythm synchronization for musicians.',
+        tags: ['React', 'Web Audio API', 'Python'],
+        repo: 'https://github.com/BarclayRkts/Metronome'
     },
     {
         year: '2026',
-        title: 'User Analytics Dashboard',
-        description: 'Automated certification management and data error reduction.',
-        links: { article: '#', demo: '#', source: '#' }
+        title: 'Personal Website',
+        description: 'Minimalist digital garden and portfolio site.',
+        tags: ['Next.js', 'Tailwind', 'TypeScript'],
+        repo: 'https://github.com/BarclayRkts/personal-website-v2'
     }
 ];
 
 export default function ProjectsSection() {
     return (
         <section id="projects" className="mt-16">
-            <div className="space-y-4">
-                <div className="flex items-center gap-4 mb-6">
-                    <SquareTerminal className="w-8 h-8 text-accent" strokeWidth={1.5} />
-                    <h3 className="text-3xl font-bold tracking-tight text-body">Projects</h3>
-                </div>
-                <p className="text-muted mb-10">Open-source projects I&#39;ve worked on over the years.</p>
+            <div className="flex items-center gap-4 mb-8">
+                <SquareTerminal className="w-8 h-8 text-accent" strokeWidth={1.5}/>
+                <h3 className="text-3xl font-bold tracking-tight text-body">Projects</h3>
+            </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    {projects.map((project, index) => (
-                        <Card key={index} className="bg-surface border-border hover:border-accent/30 transition-colors shadow-none">
-                            <CardHeader className="pb-3">
-                                <span className="text-xs font-mono text-muted mb-1">{project.year}</span>
-                                <CardTitle className="text-xl font-bold text-accent">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                {projects.map((project, index) => (
+                    <div
+                        key={index}
+                        className="bg-[#f2ecdc] border border-[#dcd6bc] rounded-lg p-5 flex flex-col aspect-[4/3] w-full transition-shadow hover:shadow-sm"
+                    >
+                        <div className="flex-1 overflow-hidden">
+                            <span className="text-[13px] font-sans text-gray-500 mb-1 block">{project.year}</span>
+                            <a
+                                href={project.repo}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="group inline-block"
+                            >
+                                <h4 className="text-lg font-bold text-[#a365b1] mb-2 leading-tight">
                                     {project.title}
-                                </CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <p className="text-sm text-muted leading-relaxed mb-6 h-12">
-                                    {project.description}
-                                </p>
+                                </h4>
+                            </a>
+                            <p className="text-[14px] text-gray-700 leading-snug line-clamp-2 h-[2.5rem]">
+                                {project.description}
+                            </p>
+                        </div>
 
-                                <div className="flex flex-wrap gap-2">
-                                    {project.links.article && (
-                                        <ProjectLink href={project.links.article}>Article</ProjectLink>
-                                    )}
-                                    {project.links.demo && (
-                                        <ProjectLink href={project.links.demo}>Demo</ProjectLink>
-                                    )}
-                                    {project.links.source && (
-                                        <ProjectLink href={project.links.source}>Source</ProjectLink>
-                                    )}
-                                </div>
-                            </CardContent>
-                        </Card>
-                    ))}
-                </div>
+                        <div className="flex flex-nowrap gap-1.5 mt-4 overflow-hidden">
+                            {project.tags.map((tag) => (
+                                <ProjectTag key={tag}>{tag}</ProjectTag>
+                            ))}
+                        </div>
+                    </div>
+                ))}
             </div>
         </section>
     );
 }
 
-function ProjectLink({ href, children }: { href: string; children: ReactNode }) {
+function ProjectTag({children}: { children: ReactNode }) {
     return (
-        <Link
-            href={href}
-            className="text-xs font-medium px-3 py-1.5 bg-button text-background rounded transition-colors hover:bg-accent"
+        <span
+            className="text-[9px] font-bold px-2 py-1 bg-[#e3dbc5] text-[#555] border border-[#ccc5b0] rounded uppercase tracking-tighter whitespace-nowrap shrink-0"
         >
             {children}
-        </Link>
+        </span>
     );
 }

@@ -43,7 +43,7 @@ const experiences = [
 
 const Experience = () => {
     return (
-        <section id="experience" className="mb-20">
+        <section id="experience" className="mt-16" >
             <div className="flex items-center gap-4 mb-12">
                 <Newspaper className="w-8 h-8 text-[var(--foreground-hex)]" strokeWidth={1.5}/>
                 <h3 className="text-3xl font-bold tracking-tight text-[var(--foreground-hex)]">Experience</h3>
