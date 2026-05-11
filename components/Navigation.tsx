@@ -66,7 +66,6 @@ const Navigation = () => {
                         <Link
                             key={link.href}
                             href={link.href}
-                            target="_blank"
                             className="flex items-center gap-3.5 group p-1 -ml-1 rounded-md hover:bg-button transition-colors"
                         >
                             <Icon className="w-5 h-5 text-muted group-hover:text-accent" strokeWidth={1.5}/>
