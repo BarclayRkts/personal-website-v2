@@ -1,36 +1,32 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🌿 DeJa Barclay | Digital Garden
 
-## Getting Started
+A minimalist personal portfolio and digital garden built with [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app). This project serves as a central hub for my professional experience, full-stack projects, and technical engineering identity.
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+* **Custom Theming**: Features a "Warm Parchment" light mode and "Deep Charcoal" dark mode driven by Tailwind v4 CSS variables.
+* **Responsive Architecture**: A persistent sidebar navigation layout optimized for both desktop and mobile viewing.
+* **Next.js 15+ App Router**: Leverages the latest React features for server-side rendering and optimized performance.
+* **Professional Focus**: Content is strictly tailored to software engineering, emphasizing scalability, performance optimization, and full-stack development.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Tech Stack
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+* **Framework**: [Next.js](https://nextjs.org/) (App Router)
+* **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)
+* **Theming**: [next-themes](https://github.com/pacocoursey/next-themes)
+* **Icons**: [Lucide React](https://lucide.dev/) & [React Icons](https://react-icons.github.io/react-icons/)
+* **Language**: [TypeScript](https://www.typescriptlang.org/)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📂 Project Structure
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```text
+├── app/               # App Router pages and layouts
+│   ├── globals.css    # Tailwind v4 @theme and custom variables
+│   └── layout.tsx     # Root layout with ThemeProvider integration
+├── components/        # UI Components
+│   ├── ui/            # Atomic design components
+│   ├── Navigation.tsx # Sidebar with inline theme toggle
+│   ├── Projects.tsx   # Dynamic project grid
+│   └── ...
+├── public/            # Static assets (Resume, images)
+└── tailwind.config.ts # Configuration for dark mode switching
