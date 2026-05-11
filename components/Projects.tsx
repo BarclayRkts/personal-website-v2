@@ -6,7 +6,7 @@ const projects = [
         year: '2026',
         title: 'Bookmark Manager',
         description: 'A full-stack link organization tool using AWS.',
-        tags: ['Java', 'Spring Boot', 'AWS', 'React'],
+        tags: ['Java', 'Spring Boot', 'AWS'],
         repo: 'https://github.com/BarclayRkts/Bookmark'
     },
     {
@@ -37,21 +37,21 @@ export default function ProjectsSection() {
                 {projects.map((project, index) => (
                     <div
                         key={index}
-                        className="bg-[#f2ecdc] border border-[#dcd6bc] rounded-lg p-5 flex flex-col aspect-[4/3] w-full transition-shadow hover:shadow-sm"
+                        className="bg-surface border border-border rounded-lg p-5 flex flex-col aspect-[4/3] w-full transition-shadow hover:shadow-sm"
                     >
                         <div className="flex-1 overflow-hidden">
-                            <span className="text-[13px] font-sans text-gray-500 mb-1 block">{project.year}</span>
+                            <span className="text-[13px] font-sans text-muted mb-1 block">{project.year}</span>
                             <a
                                 href={project.repo}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="group inline-block"
                             >
-                                <h4 className="text-lg font-bold text-[#a365b1] mb-2 leading-tight">
+                                <h4 className="text-lg font-bold text-[#a365b1] dark:text-accent mb-2 leading-tight">
                                     {project.title}
                                 </h4>
                             </a>
-                            <p className="text-[14px] text-gray-700 leading-snug line-clamp-2 h-[2.5rem]">
+                            <p className="text-[14px] text-muted leading-snug line-clamp-2 h-[2.5rem]">
                                 {project.description}
                             </p>
                         </div>
@@ -71,7 +71,11 @@ export default function ProjectsSection() {
 function ProjectTag({children}: { children: ReactNode }) {
     return (
         <span
-            className="text-[9px] font-bold px-2 py-1 bg-[#e3dbc5] text-[#555] border border-[#ccc5b0] rounded uppercase tracking-tighter whitespace-nowrap shrink-0"
+            className="text-[10px] font-medium px-2 py-0.5
+                       bg-accent/10 text-accent
+                       dark:bg-accent/20 dark:text-accent-hover
+                       rounded-md border border-accent/20
+                       uppercase tracking-tight whitespace-nowrap shrink-0"
         >
             {children}
         </span>

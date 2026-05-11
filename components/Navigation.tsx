@@ -1,8 +1,11 @@
-import React from 'react';
+"use client"
+
+import React, {useEffect, useState} from 'react';
 import Link from 'next/link';
 import {SiRefinedgithub} from 'react-icons/si';
 import {FaLinkedin} from 'react-icons/fa';
-import {SquareTerminal, User, Newspaper, MailWarning, Terminal, Code2} from 'lucide-react';
+import {SquareTerminal, User, Newspaper, MailWarning, Terminal, Code2, Sun, Moon} from 'lucide-react';
+import {useTheme} from "next-themes";
 
 const mainLinks = [
     {href: '#about', label: 'Page Me', icon: User},
@@ -18,24 +21,42 @@ const connectLinks = [
 ];
 
 const Navigation = () => {
+    const { theme, setTheme } = useTheme();
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        const timeout = setTimeout(() => setMounted(true), 0);
+        return () => clearTimeout(timeout);
+    }, []);
+
+    if (!mounted) return null;
+
     return (
         <nav
             className="w-full md:w-64 flex-shrink-0 bg-background md:sticky border-r border-border md:top-0 md:h-screen p-8 md:pt-16">
             <div className="flex items-center gap-3 mb-12">
-                <Terminal className="w-6 h-6 text-accent"/>
-                <Link href="/">
-                    <h1 className="text-xl font-medium text-body hover:underline">DeJa Barclay</h1>
+                <Terminal className="w-6 h-6 text-accent flex-shrink-0"/>
+
+                <Link href="/" className="whitespace-nowrap">
+                    <h1 className="text-xl font-medium text-body hover:underline">
+                        DeJa Barclay
+                    </h1>
                 </Link>
-                <div className="flex gap-1.5 ml-auto">
-                    <span className="w-2.5 h-2.5 bg-blue-400 rounded-full"></span>
-                    <span className="w-2.5 h-2.5 bg-yellow-400 rounded-full"></span>
-                </div>
+                {mounted && (
+                    <button
+                        onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+                        className="ml-auto p-2 rounded-full hover:bg-accent/10 transition-colors text-muted hover:text-accent"
+                        aria-label="Toggle Theme"
+                    >
+                        {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+                    </button>
+                )}
             </div>
             <div className="mb-12">
                 <h2 className="text-xs font-bold uppercase text-muted tracking-widest mb-4">About Me</h2>
                 <p className="text-sm leading-relaxed text-muted">
                     I&#39;m a <Link href="/experience" className="text-body font-medium hover:underline">Software
-                    Engineer</Link>, amateur guitarist, and photography enthusiast. This is my digital garden. 🌱
+                    Engineer</Link>, dedicated to building thoughtful, scalable solutions and solving challenging technical problems. This is my digital garden. 🌱
                 </p>
             </div>
             <div className="space-y-4 mb-16">

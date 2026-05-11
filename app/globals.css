@@ -18,6 +18,17 @@
   --color-button: #403d39;
 }
 
+.dark {
+  --color-background: #1a1918;   /* Deepest charcoal */
+  --color-surface: #252422;      /* Slightly lighter charcoal */
+  --color-accent: #ff8c61;       /* Brighter terracotta for visibility */
+  --color-accent-hover: #eb5e28;
+  --color-body: #fffcf2;         /* Parchment white for text */
+  --color-muted: #9b998d;        /* Lighter warm gray */
+  --color-border: #403d39;       /* Muted dark border */
+  --color-button: #f5f2e9;       /* Light button for dark background */
+}
+
 html {
   scroll-behavior: smooth;
 }
