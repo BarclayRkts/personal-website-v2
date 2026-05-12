@@ -2,6 +2,13 @@
 
 A minimalist personal portfolio and digital garden built with [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app). This project serves as a central hub for my professional experience, full-stack projects, and technical engineering identity.
 
+---
+
+## 🔗 Live Demo
+You can view the project live here: **[dejabarclay.vercel.app](https://dejabarclay.vercel.app/)**
+
+---
+
 ## ✨ Features
 
 * **Custom Theming**: Features a "Warm Parchment" light mode and "Deep Charcoal" dark mode driven by Tailwind v4 CSS variables.
