@@ -2,9 +2,9 @@ import React from 'react';
 import { Code2 } from 'lucide-react';
 
 const skillCategories = [
-    { name: "Languages", skills: ["PHP", "React", "Python", "C++", "Java", "SQL", "JavaScript", "TypeScript", "HTML", "CSS"] },
+    { name: "Languages", skills: ["PHP", "React", "Python", "C#", "Java", "SQL", "JavaScript", "TypeScript", "HTML", "CSS"] },
     { name: "APIs", skills: ["RESTful APIs", "GraphQL"] },
-    { name: "Frameworks & Libraries", skills: ["React.js", "Next.js", "Node.js", "Redux", "Selenium", "Spring Boot"] },
+    { name: "Frameworks & Libraries", skills: ["React", "Next.js", "Node.js", "Redux", "ASP.NET", "Spring Boot", "Selenium"] },
     { name: "Databases", skills: ["MySQL", "PostgreSQL", "Microsoft SQL Server", "MongoDB", "Google Firebase"] },
     { name: "Performance", skills: ["Splunk", "Postman", "PageSpeed Insights"] },
     { name: "Tools", skills: ["AWS", "Git", "Jira", "Confluence", "MySQL Workbench", "Visual Studio", "PhpStorm"] }

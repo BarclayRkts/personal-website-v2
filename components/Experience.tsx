@@ -7,13 +7,12 @@ const experiences = [
         title: 'Software Developer · Paycom',
         bullets: [
             'Led development of client facing pages with React and TypeScript to support high traffic volume, implementing advanced search, filter, and sort functionality.',
-            'Developed robust APIs to integrate React frontend interfaces with PHP backend systems, optimizing large-scale data processing and improving overall system performance.',
+            'Developed robust APIs to integrate React frontend interfaces with backend systems, optimizing large-scale data processing and improving overall system performance.',
             'Optimized backend data processing and SQL query performance, reducing server response times by 50% and significantly improving application scalability under load.',
             'Delivered production ready code in weekly sprints, collaborating in code reviews and QA cycles to ensure high quality, on-time releases.',
             'Investigated and debugged application bugs by analyzing logs, reviewing stack traces, and replicating errors.',
             'Collaborated with cross-functional teams to ensure timely delivery of project milestones.'
         ],
-        // skills: ['React', 'TypeScript', 'PHP', 'SQL', 'Java', 'Spring Boot', 'AWS'],
         link: '#'
     },
     {
@@ -24,7 +23,6 @@ const experiences = [
             'Transformed raw parsing data into interactive data visualizations, providing leadership with actionable insights into UI library adoption across engineering teams.',
             'Worked in an Agile environment to develop tracking systems for UI library usage, researching implementation patterns with senior engineers to improve frontend consistency and scalability.'
         ],
-        // skills: ['React', 'Node.js', 'DynamoDB', 'TypeScript', 'SQl'],
         link: '#'
     },
     {
@@ -36,7 +34,6 @@ const experiences = [
             'Provisioned and maintained proprietary software through regular updates and troubleshooting to support large scale user workflows.',
             'Mentored junior interns on technical best practices and debugging strategies, improving overall team productivity.'
         ],
-        // skills: ['Java', 'Spring Boot', 'DynamoDB', 'Algorithms', 'Mathematics'],
         link: '#'
     }
 ];
@@ -60,8 +57,6 @@ const Experience = () => {
                             <h3 className="text-xl font-bold text-[var(--foreground-hex)] group-hover:text-[var(--accent-purple-hex)] transition-colors">
                                 <a href={exp.link} className="inline-flex items-baseline gap-1">
                                     {exp.title}
-                                    {/*<span*/}
-                                    {/*    className="inline-block transition-transform group-hover:-translate-y-1 group-hover:translate-x-1">↗</span>*/}
                                 </a>
                             </h3>
                             <ul className="mt-4 space-y-2">
@@ -73,14 +68,6 @@ const Experience = () => {
                                     </li>
                                 ))}
                             </ul>
-                            {/*<ul className="mt-6 flex flex-wrap gap-2">*/}
-                            {/*    {exp.skills.map((skill) => (*/}
-                            {/*        <li key={skill}*/}
-                            {/*            className="flex items-center rounded-full bg-[var(--accent-purple-hex)] bg-opacity-10 px-3 py-1 text-xs font-medium leading-5 text-[var(--accent-purple-hex)]">*/}
-                            {/*            {skill}*/}
-                            {/*        </li>*/}
-                            {/*    ))}*/}
-                            {/*</ul>*/}
                         </div>
                     </div>
                 ))}
