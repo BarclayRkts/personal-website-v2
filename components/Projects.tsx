@@ -18,10 +18,10 @@ const projects = [
     },
     {
         year: '2026',
-        title: 'Personal Website',
-        description: 'Minimalist digital garden and portfolio site.',
-        tags: ['Next.js', 'Tailwind', 'TypeScript'],
-        repo: 'https://github.com/BarclayRkts/personal-website-v2'
+        title: 'FlashCard App',
+        description: 'A full-stack flashcard studying application using .NET.',
+        tags: ['.NET', 'React', 'TypeScript', "C#"],
+        repo: 'https://github.com/BarclayRkts/FlashCards'
     }
 ];
 
