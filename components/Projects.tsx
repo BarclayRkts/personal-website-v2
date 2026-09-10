@@ -11,10 +11,10 @@ const projects = [
     },
     {
         year: '2026',
-        title: 'Interactive Metronome',
-        description: 'Real-time rhythm synchronization for musicians.',
-        tags: ['React', 'Web Audio API', 'Python'],
-        repo: 'https://github.com/BarclayRkts/Metronome'
+        title: 'Tottenham Hotspur Players Map',
+        description: 'An interactive map displaying Tottenham Hotspur players.',
+        tags: ['React', 'Next.js', 'C#'],
+        repo: 'https://tottenhamplayersmap.com/'
     },
     {
         year: '2026',
