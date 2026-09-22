@@ -18,10 +18,10 @@ const projects = [
     },
     {
         year: '2026',
-        title: 'FlashCard App',
-        description: 'A full-stack flashcard studying application using .NET.',
+        title: 'GameDaySync',
+        description: 'An app that tracks sports events & alerts Discord users.',
         tags: ['.NET', 'React', 'TypeScript', "C#"],
-        repo: 'https://github.com/BarclayRkts/FlashCards'
+        repo: 'https://github.com/BarclayRkts/GameDaySync'
     }
 ];
 
